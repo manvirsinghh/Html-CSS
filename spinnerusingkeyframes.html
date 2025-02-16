@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 700px;
+            background-color: #f4f4f4;
+
+
+        }
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-top-color: #007BFF;
+            /* Blue color for the top */
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            /*here we can choose time for loader as currently it is set to infinite we can set like it as well as 3 ,, et
+            c for any seconds and we change linear to ease ,ease-in ,ease-out etc */
+        }
+        @keyframes spin {
+            0%{
+                transform:rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+            
+        }
+ 
+    </style>
+</head>
+
+<body>
+    <div class="loader"></div>
+</body>
+
+</html>
+
+ <!--The @keyframes rule is used to create CSS animations 
+ @keyframes name {
+  keyframes-selector {css-styles;}
+  keyframes-selector {css-styles;}
+  ...
+}
+
+Property Values
+Value	Description
+name	Required. Defines a name for the keyframe
+keyframes-selector	Required. Points along the animation sequence.
+Legal values:
+
+0-100%
+from (same as 0%)
+to (same as 100%)
+
+Note: You can have many keyframes-selectors in one animation sequence
+
+css-styles	Required. One or more CSS properties and values
